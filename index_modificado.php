@@ -61,7 +61,7 @@
     </main>
     
     <footer>
-        <p>&copy; 2024 Projecte Welcome 1</p>
+        <p>&copy; 2024 Projecte Welcome 1., Ruth Romero y Marc Cachinero</p>
     </footer>
 </body>
 </html>
