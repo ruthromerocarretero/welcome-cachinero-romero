@@ -41,7 +41,7 @@
                     }
                     echo "<a href='profile/$name.html'>";
                     if ($image_path) {
-                        echo "<img src='$image_path' alt='$name'>";
+                        echo "<img src='$image_path' alt='Foto de perfil de $name'>";
                     }
                     echo "<br>$name</a>";
                     echo "</td>";
