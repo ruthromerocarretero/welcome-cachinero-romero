@@ -16,7 +16,7 @@
             <table>
                 <tr>
                 <?php
-                $htmls = scandir('./profile', SCANDIR_SORT_ASCENDING);
+                $htmls = scandir('./profiles', SCANDIR_SORT_ASCENDING);
                 $counter = 0;
 
                 foreach ($htmls as $html) {
@@ -27,12 +27,12 @@
                     $name = substr($html, 0, -5);
 
                     $image_path = "";
-                    if (file_exists("./img/$name.jpg")) {
-                        $image_path = "./img/$name.jpg";
-                    } elseif (file_exists("./img/$name.png")) {
-                        $image_path = "./img/$name.png";
-                    } elseif (file_exists("./img/$name.jpeg")) {
-                        $image_path = "./img/$name.jpeg";
+                    if (file_exists("./images/$name.jpg")) {
+                        $image_path = "./images/$name.jpg";
+                    } elseif (file_exists("./images/$name.png")) {
+                        $image_path = "./images/$name.png";
+                    } elseif (file_exists("./images/$name.jpeg")) {
+                        $image_path = "./images/$name.jpeg";
                     }
                 
                     echo "<td>";
