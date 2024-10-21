@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
             <table>
                 <tr>
                 <?php
-                $htmls = scandir('./profile', SCANDIR_SORT_ASCENDING);
+                $htmls = scandir('./profiles', SCANDIR_SORT_ASCENDING);
                 $counter = 0;
 
                 foreach ($htmls as $html) {
@@ -30,19 +30,23 @@
                     $name = substr($html, 0, -5);
 
                     $image_path = "";
-                    if (file_exists("./img/$name.jpg")) {
-                        $image_path = "./img/$name.jpg";
-                    } elseif (file_exists("./img/$name.png")) {
-                        $image_path = "./img/$name.png";
-                    } elseif (file_exists("./img/$name.jpeg")) {
-                        $image_path = "./img/$name.jpeg";
+                    if (file_exists("./images/$name.jpg")) {
+                        $image_path = "./images/$name.jpg";
+                    } elseif (file_exists("./images/$name.png")) {
+                        $image_path = "./images/$name.png";
+                    } elseif (file_exists("./images/$name.jpeg")) {
+                        $image_path = "./images/$name.jpeg";
                     }
-                
+
+                    if ($counter % 10 == 0 && $counter != 0) {
+                        echo "</tr><tr>"; // Iniciar nueva fila cada 10 columnas
+                    }
+
                     echo "<td>";
                     if (!$image_path) {
                         echo "<div class='no-image'>Sense imatge</div>";
                     }
-                    echo "<a href='profile/$name.html'>";
+                    echo "<a href='profiles/$name.html'>";
                     if ($image_path) {
                         echo "<img src='$image_path' alt='Foto de perfil de $name'>";
                     }
@@ -50,13 +54,10 @@
                     echo "</td>";
 
                     $counter++;
-                    if ($counter % 10 == 0) {
-                        echo "</tr><tr>";
-                    }
                 }
 
                 if ($counter % 10 != 0) {
-                    echo "</tr>";
+                    echo "</tr>"; // Cerrar última fila si no está completa
                 }
                 ?>
             </table>
@@ -68,3 +69,4 @@
     </footer>
 </body>
 </html>
+
