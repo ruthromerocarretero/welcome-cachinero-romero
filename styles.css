@@ -1,0 +1,56 @@
+* {
+    padding: 0px;
+    font-family: "Roboto", sans-serif
+}
+body {
+    background-color: rgb(178, 194, 177);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 30px;
+}
+
+td a{
+    display: flex;
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+td a button {
+    background-color: rgb(172, 212, 172);
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+
+img {
+    width: 150px;
+    padding-bottom: 10px;
+    border-radius: 41px;
+}
+
+.no-image {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+
+
+footer {
+    text-align: center;
+    color: white;
+}
