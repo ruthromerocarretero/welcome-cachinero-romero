@@ -13,7 +13,7 @@
     <header>
         <h1>Projecte Welcome 1</h1>
     </header>
-    
+
     <main>
         <section>
             <table>
@@ -37,7 +37,7 @@
                     } elseif (file_exists("./images/$name.jpeg")) {
                         $image_path = "./images/$name.jpeg";
                     }
-                
+
                     echo "<td>";
                     if (!$image_path) {
                         echo "<div class='no-image'>Sense imatge</div>";
@@ -62,7 +62,7 @@
             </table>
         </section>
     </main>
-    
+
     <footer>
     <p>&copy; 2024 Projecte Welcome 1., Ruth Romero y Marc Cachinero</p>
     </footer>
