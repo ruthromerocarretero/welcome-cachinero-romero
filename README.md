@@ -24,8 +24,8 @@ You are welcome to add any improvements to the PHP code if you feel like doing i
 
 ## Folders and filenames
 
-- `img` folder : your picture in JPG format. The filename will be used to display your name. Choose it appropriately.
-- `profile` folder : your presentation in HTML format. The **filename** have to match the one of the picture (without extension).
+- `imgages` folder : your picture in JPG format. The filename will be used to display your name. Choose it appropriately.
+- `profiles` folder : your presentation in HTML format. The **filename** have to match the one of the picture (without extension).
 
 For instance, you could add your picture ``myperson.jpg`` in the ``ìmg`` folder and then add your description ``myperson.html`` in the ``profile``folder.
 
